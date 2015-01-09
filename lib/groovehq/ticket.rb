@@ -36,7 +36,7 @@ module Groovehq
       HTTParty.post(URL,
                     :body => to_json,
                     :headers => headers
-                   )
+                   ).parsed_response
     end
 
     def from_first_name

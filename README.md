@@ -1,6 +1,8 @@
 # Groovehq
 
-TODO: Write a gem description
+A quick and super dirty Ruby gem for creating tickets via the [Groove API](https://www.groovehq.com/docs).
+
+It should definitely not be used for any production level uses.
 
 ## Installation
 
@@ -18,7 +20,18 @@ Or install it yourself as:
 
 ## Usage
 
-TODO: Write usage instructions here
+```ruby
+require 'groovehq'
+Groovehq.auth_token = 'AAAAA'
+t = Groovehq::Ticket.new
+t.body = "A\nVery\nVery\nLong\nBody"
+t.from_email = 'jstirk@example.com'
+t.from_name = 'Jason Stirk'
+t.to_email = 'contact@example.com.au'
+t.tags = [ :web ]
+
+t.save!
+```
 
 ## Contributing
 

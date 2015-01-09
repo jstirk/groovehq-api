@@ -30,7 +30,7 @@ t.from_name = 'Jason Stirk'
 t.to_email = 'contact@example.com.au'
 t.tags = [ :web ]
 
-t.save!
+t.save
 ```
 
 ## Contributing

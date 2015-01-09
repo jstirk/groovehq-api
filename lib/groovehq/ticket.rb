@@ -32,7 +32,7 @@ module Groovehq
       hash.to_json
     end
 
-    def save!
+    def save
       HTTParty.post(URL,
                     :body => to_json,
                     :headers => headers
